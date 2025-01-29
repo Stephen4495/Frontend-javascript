@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin flip game</title>
+  </head>
+  <body>
+    <p>Roll Dice Game</p>
+
+    <button onclick="rollDice();">Roll</button>
+    <script>
+      function rollDice() {
+        const roll = Math.floor(Math.random() * 6) + 1;
+
+       if(roll === 6) {
+        console.log('You win!');
+       } else{
+        console.log(`You lose! You chose ${roll}. Try again`);
+       }
+      }
+    </script>
+  </body>
+</html>
