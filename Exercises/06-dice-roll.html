@@ -8,14 +8,25 @@
 
     <button onclick="rollDice();">Roll</button>
     <script>
+      const score = {
+        wins: 0,
+        losses: 0
+      }
+
       function rollDice() {
         const roll = Math.floor(Math.random() * 6) + 1;
-
+        
        if(roll === 6) {
-        console.log('You win!');
+        score.wins += 1;
+        console.log(`You Win! You chose ${roll}. Good Game!
+Wins:${score.wins}, Lost: ${score.losses}`);
        } else{
-        console.log(`You lose! You chose ${roll}. Try again`);
+        score.losses += 1;
+        console.log(`You lose! You chose ${roll}. Try again
+Wins:${score.wins}, Lost: ${score.losses}`);
        }
+
+       localStorage.setItem('score', JSON.stringify(score));
       }
     </script>
   </body>

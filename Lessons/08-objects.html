@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      /*
+      // An object groups multiple values together
+
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+
+      // Adding a value to the object
+
+      product.name = 'cotton socks';
+      console.log(product);
+
+      // Adding a property to the object
+
+      product.newProperty = true;
+      console.log(product);
+
+      // Removing a property from an object
+
+      delete product.newProperty;
+      console.log(product);
+
+      //Why we use objects:
+      /*
+        Let us group multiple values together
+        Allows us to use multiple values together
+
+      */
+     
+     
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        // When we save a function inside an object is called a method
+        // Eg; console.log(). Console is an object
+        // Built-in methods eg; Math.random()
+        fun: function function1() {
+          console.log('Function inside  object');
+        }
+      };
+
+      console.log(product2['delivery-time']); //Using bracket notation
+
+    //JSON (Javascript Object Notation)
+
+    // It is a similar syntax to javascript object but with less features
+    // We use JSON when we send data between computers
+    // When storing data
+
+    // Built-in JSON Object:
+    // Converts Javascript Object to JSON
+
+    console.log(JSON.stringify(product2));
+
+    // COnverting from JSON to Javascript Object
+
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+
+
+    //localStorage
+
+    // localStorage only supports   strings
+    // used to save values more permanently
+    // built-in methods localstorage.setItem (takes two values; the name of the value you are saving to access later and the actual value)
+    // localStorage.getItem (takes only the name of the value saved)
+
+
+    // DESTRUCTURING (an easier way of taking properties out of an object)
+    
+    const object4 = {
+      message: 'Good job!',
+      price: 799
+    };
+
+    // Let's say you want to save it in a variable also called message
+    // We can use destructuring shortcut for multiple properties 
+
+    //const message = object4.message;
+    const { message, price } = object4; // This will take the message property out of object4 and save it in a variable called message, same with the price
+    console.log(message); //output will be the value in message property
+    console.log(message); //output will be the value in price property
+
+    //SHORTHAND PROPERTY
+
+    //IF the property and variable name are the same you can type it out once
+
+    const object5 = {
+      //message: message
+      message,
+      method: function function1() {
+        console.log(method)
+      }
+    };
+
+    console.log(object5);
+
+    // SHORTHAND METHOD
+
+    const object6 = {
+      //message: message
+      message,
+        /*method: function function1() {
+          console.log('method')
+        }
+        */
+      method() {
+        console.log('method')
+      }
+    };
+
+    object6.method();
+
+    // IN THIS LESSON:  
+      /*
+      1. Objects = group related values together
+      2. Added a score to Rock Paper Scissors game
+      3. Learnt about built-in objects(JSON, localStorage)
+      4. More details(null, autoboxing, references)
+      5. Shortcuts(destructuring, shorthand property, shorthand method)
+      */
+
+     //This lesson has contributed to alot I had skipped through.
+
+
+    </script>
+  </body>
+</html>
