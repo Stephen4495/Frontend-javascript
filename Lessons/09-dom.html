@@ -4,9 +4,40 @@
     <title>DOM</title>
   </head>
   <body>
+    <button>Hello</button>
+    <button class="js-button">Second button</button>
     <script>
-   
+      // NB: When a HTML element is inside javascript it is just like a javascript object and it has properties and methods we can use
 
+      // Properties and methods of the DOM
+      /*
+        console.log(document.title);
+        document.title = 'changed';
+
+        //document.body lets us get the body element and put it in our javascript 
+        console.log(document.body);
+        console.log(typeof document.body);
+
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = '<button>Good job!</button>';
+      */
+
+      // Methods
+      // 1. document.querySelector()
+      // lets us get any element from the page and put inside Javascript
+      console.log(document.querySelector('button').innerHTML);
+
+      document.querySelector('button')
+        .innerHTML = 'Changed';
+      
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+      
+      /*
+       // DOM is a built-in object
+        document.body.innerHTML = 'hello';
+        document.title =  'Good job!';
+      */
     </script>
   </body>
 </html>
